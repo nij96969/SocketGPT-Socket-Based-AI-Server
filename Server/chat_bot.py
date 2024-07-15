@@ -1,12 +1,3 @@
-"""
-Install the Google AI Python SDK
-
-$ pip install google-generativeai
-
-See the getting started guide for more information:
-https://ai.google.dev/gemini-api/docs/get-started/python
-"""
-
 import os
 
 import google.generativeai as genai
@@ -16,7 +7,6 @@ from google.generativeai.types import HarmCategory, HarmBlockThreshold
 genai.configure(api_key=os.environ["API_KEY"])
 
 # Create the model
-# See https://ai.google.dev/api/python/google/generativeai/GenerativeModel
 generation_config = {
   "temperature": 0.7,
   "top_p": 0.95,
