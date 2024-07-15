@@ -1,0 +1,44 @@
+GPT/LLM Server Project with Gemini
+
+Overview:
+This project implements a GPT/LLM server using Google's Gemini model. It consists of a server component that hosts the language model and a client component for user interaction.
+
+Deployment Methods:
+1. Cloud-based (EC2):
+   - GPT_SERVER runs on one EC2 instance (Ubuntu)
+   - CLIENT runs on another EC2 instance (Ubuntu)
+
+2. Local:
+   - Run both server.py and client.py on your local machine
+
+Prerequisites:
+Install required libraries using pip:
+
+For Server (GPT/LLM side):
+pip install -r requirement_server.txt
+or
+pip install google-generativeai python-dotenv
+
+For Client side:
+pip install -r requirement_client.txt
+or
+pip install python-dotenv
+
+Server Configuration:
+1. Ensure chat_bot.py and GPT_server.py are in the same directory
+2. Create a .env file in the server directory with:
+   API_KEY="Your-Gemini-API-Key"
+
+Client Configuration:
+1. Ensure client.py is in its directory
+2. Create a .env file in the client directory with:
+   HOST_IP="Your-Server-Side-IPV4-Address"
+
+Running the Application:
+Server Side:
+python3 GPT_server.py
+
+Client Side:
+python3 client.py
+
+Note: Make sure to obtain a Gemini API key from Google Cloud Console or Google AI Studio before running the server.
